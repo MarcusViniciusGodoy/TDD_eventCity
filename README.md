@@ -11,6 +11,9 @@ O projeto consiste em um sistema de eventos da cidade, onde o objetivo do projet
 ## UML
 ![Catalog](https://github.com/MarcusViniciusGodoy/assets/blob/main/eventCity.PNG)
 
+## Testes Automatizados
+![Teste](https://github.com/MarcusViniciusGodoy/assets/blob/main/Testes.PNG)
+
 ### Pré-requisitos
  Para executar este projeto, é necessário ter:
  - [Java](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) (versão 11 ou superior)
