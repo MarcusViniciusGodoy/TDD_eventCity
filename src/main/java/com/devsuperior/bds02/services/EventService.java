@@ -3,6 +3,7 @@ package com.devsuperior.bds02.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.devsuperior.bds02.dto.CityDTO;
 import com.devsuperior.bds02.dto.EventDTO;
 import com.devsuperior.bds02.entities.City;
 import com.devsuperior.bds02.entities.Event;
@@ -40,7 +41,8 @@ public class EventService {
         entity.setUrl(dto.getUrl());
 
         if (dto.getCityId() != null) {
-            City city = cityRepository.getReferenceById(dto.getCityId());
+            City city = cityRepository.findById(dto.getCityId())
+                .orElseThrow(() -> new ResourceNotFoundException("City id not found " + dto.getCityId()));
             entity.setCity(city);
         }
     }   
